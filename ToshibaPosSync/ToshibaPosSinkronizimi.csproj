@@ -1,0 +1,232 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{CCDBC50D-F53A-4B73-BE6D-4DF7BCB3BCEF}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <RootNamespace>POSSinkronizimi</RootNamespace>
+    <AssemblyName>POSSinkronizimi</AssemblyName>
+    <TargetFrameworkVersion>v4.8</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
+    <IsWebBootstrapper>false</IsWebBootstrapper>
+    <NuGetPackageImportStamp>
+    </NuGetPackageImportStamp>
+    <PublishUrl>\\KUBI\Publish\</PublishUrl>
+    <Install>true</Install>
+    <InstallFrom>Unc</InstallFrom>
+    <UpdateEnabled>false</UpdateEnabled>
+    <UpdateMode>Foreground</UpdateMode>
+    <UpdateInterval>7</UpdateInterval>
+    <UpdateIntervalUnits>Days</UpdateIntervalUnits>
+    <UpdatePeriodically>false</UpdatePeriodically>
+    <UpdateRequired>true</UpdateRequired>
+    <MapFileExtensions>true</MapFileExtensions>
+    <InstallUrl>\\KUBI\Publish\</InstallUrl>
+    <MinimumRequiredVersion>1.0.0.18</MinimumRequiredVersion>
+    <ApplicationRevision>18</ApplicationRevision>
+    <ApplicationVersion>1.0.0.%2a</ApplicationVersion>
+    <UseApplicationTrust>false</UseApplicationTrust>
+    <PublishWizardCompleted>true</PublishWizardCompleted>
+    <BootstrapperEnabled>true</BootstrapperEnabled>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>x86</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <LangVersion>8.0</LangVersion>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <LangVersion>8.0</LangVersion>
+  </PropertyGroup>
+  <PropertyGroup>
+    <ApplicationIcon>Icona 32x32pix.ico</ApplicationIcon>
+  </PropertyGroup>
+  <PropertyGroup />
+  <PropertyGroup>
+    <ManifestCertificateThumbprint>1C6FA58E693810EF15140AEE5E3FA8E186534334</ManifestCertificateThumbprint>
+  </PropertyGroup>
+  <PropertyGroup>
+    <ManifestKeyFile>POSSinkronizimi_TemporaryKey.pfx</ManifestKeyFile>
+  </PropertyGroup>
+  <PropertyGroup>
+    <GenerateManifests>true</GenerateManifests>
+  </PropertyGroup>
+  <PropertyGroup>
+    <SignManifests>false</SignManifests>
+  </PropertyGroup>
+  <PropertyGroup>
+    <StartupObject />
+  </PropertyGroup>
+  <PropertyGroup />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'POS|AnyCPU'">
+    <DebugSymbols>true</DebugSymbols>
+    <OutputPath>bin\POS\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <DebugType>full</DebugType>
+    <PlatformTarget>x86</PlatformTarget>
+    <LangVersion>8.0</LangVersion>
+    <ErrorReport>prompt</ErrorReport>
+    <CodeAnalysisRuleSet>MinimumRecommendedRules.ruleset</CodeAnalysisRuleSet>
+  </PropertyGroup>
+  <PropertyGroup />
+  <PropertyGroup />
+  <PropertyGroup />
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="DaljaMallitSyncCL.cs" />
+    <Compile Include="DBLocalClass.cs" />
+    <Compile Include="DergoEmail.cs" />
+    <Compile Include="InformimiForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="InformimiForm.Designer.cs">
+      <DependentUpon>InformimiForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="KontrolloTeDhenatNeServer.cs" />
+    <Compile Include="LidhjaForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="LidhjaForm.Designer.cs">
+      <DependentUpon>LidhjaForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="PosAPI.cs" />
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+    <Compile Include="RaportetClass.cs" />
+    <Compile Include="RaportiRDLCForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="RaportiRDLCForm.Designer.cs">
+      <DependentUpon>RaportiRDLCForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="RDLCPrinterClass.cs" />
+    <Compile Include="Siguria.cs" />
+    <Compile Include="SinkronizimetTimerat.cs" />
+    <Compile Include="SinkronizimiClass.cs" />
+    <Compile Include="SinkronizimiForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="SinkronizimiForm.Designer.cs">
+      <DependentUpon>SinkronizimiForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="SubjektetCL.cs" />
+    <Compile Include="ImportoClass.cs" />
+    <Compile Include="Tabelat.cs" />
+    <EmbeddedResource Include="InformimiForm.resx">
+      <DependentUpon>InformimiForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="LidhjaForm.resx">
+      <DependentUpon>LidhjaForm.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <SubType>Designer</SubType>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="RaportiRDLCForm.resx">
+      <DependentUpon>RaportiRDLCForm.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="SinkronizimiForm.resx">
+      <DependentUpon>SinkronizimiForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FaturaA4POS.rdlc" />
+    <None Include="POSSinkronizimi_TemporaryKey.pfx" />
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Icona 32x32pix.ico" />
+    <None Include="SQL\Funksionet.sql" />
+    <None Include="SQL\Ndryshimet.sql" />
+    <None Include="SQL\RikrijoDB.sql" />
+    <None Include="SQL\Tabelat.sql" />
+    <None Include="SQL\ProceduratLokal.sql" />
+    <None Include="SQL\KomandatFiskale.sql" />
+  </ItemGroup>
+  <ItemGroup>
+    <BootstrapperPackage Include=".NETFramework,Version=v4.5.2">
+      <Visible>False</Visible>
+      <ProductName>Microsoft .NET Framework 4.5.2 %28x86 and x64%29</ProductName>
+      <Install>true</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Framework.3.5.SP1">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5 SP1</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\ToshibaPos.DAL\ToshibaPos.DAL.csproj">
+      <Project>{5e7ce028-aa20-4a70-8484-c9720269010c}</Project>
+      <Name>ToshibaPos.DAL</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\ToshibaPos.SDK\ToshibaPos.SDK.csproj">
+      <Project>{60ada5b4-24a1-45af-b318-9887f8f052a7}</Project>
+      <Name>ToshibaPos.SDK</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <PackageReference Include="Microsoft.CodeAnalysis.FxCopAnalyzers">
+      <Version>3.3.0</Version>
+      <IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
+      <PrivateAssets>all</PrivateAssets>
+    </PackageReference>
+    <PackageReference Include="Microsoft.ReportViewer.Common">
+      <Version>10.0.40219.1</Version>
+    </PackageReference>
+    <PackageReference Include="Microsoft.ReportViewer.Runtime.Common">
+      <Version>12.0.2402.15</Version>
+    </PackageReference>
+    <PackageReference Include="Microsoft.ReportViewer.WinForms.v12">
+      <Version>12.0.0.1</Version>
+    </PackageReference>
+    <PackageReference Include="Microsoft.SqlServer.Types">
+      <Version>14.0.1016.290</Version>
+    </PackageReference>
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+</Project>
